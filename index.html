@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Van Gogh</title>
+  </head>
+  <body>
+    <!-- header image and h1-->
+    <div class="container">
+      <img
+        id="header-image"
+        src="images/header-image.jpg"
+        alt="Landscape at Twilight by Van Gogh. evening landscape in the fields near Auvers, with a view of the local castle. A road winds past dark trees underneath a luminous yellow sky."
+        title="Evening Landscape With Rising Moon"
+      />
+      <!--header text && background-->
+      <div class="header-text"><h1>Biography of Vincent van Gogh</h1></div>
+      <!--end text && bg-->
+    </div>
+    <!--end container-->
+    <hr />
+    <!--paragraph wrapping figure-->
+    <div id="picture">
+      <figure id="pic">
+        <img
+          src="images/VG.jpg"
+          alt="Self portraight of Vincent van Gogh. A red haired man with a beard wearing a blue suit in front of a swirly blue background."
+          title="Self portrait of Van Gogh"
+        />
+        <figcaption>Self Portrait painted in 1889</figcaption>
+      </figure>
+      <p>
+        <b>Vincent Willem van Gogh</b> (30 March 1853 – 29 July 1890) was a
+        Dutch Post-Impressionist painter who posthumously became one of the most
+        famous and influential figures in Western art history. In a decade, he
+        created about 2,100 artworks, including around 860 oil paintings, most
+        of which date from the last two years of his life. They include
+        landscapes, still lifes, portraits and self-portraits, and are
+        characterised by bold colours and dramatic, impulsive and expressive
+        brushwork that contributed to the foundations of modern art. Not
+        commercially successful in his career, he struggled with severe
+        depression and poverty, which eventually led to his suicide at age
+        thirty-seven.
+      </p>
+    </div>
+    <!--end paragraph wrapping figure-->
+    <p>
+      <!--second paragraph-->
+      Van Gogh was commercially unsuccessful during his lifetime, and he was
+      considered a madman and a failure. As he became famous only after his
+      suicide, he came to be seen as a misunderstood genius in the public
+      imagination. His reputation grew in the early 20th century as elements of
+      his style came to be incorporated by the Fauves and German Expressionists.
+      He attained widespread critical and commercial success over the ensuing
+      decades, and is remembered as an important but tragic painter whose
+      troubled personality typifies the romantic ideal of the tortured artist.
+      Today, Van Gogh's works are among the world's most expensive paintings to
+      have ever sold, and his legacy is honoured by a museum in his name, the
+      Van Gogh Museum in Amsterdam, which holds the world's largest collection
+      of his paintings and drawings.
+    </p>
+
+    <!-- end second paragraph-->
+    <!--section containing slide show and it's header-->
+    <div class="slideshow" style="max-width: 500px;">
+      <h2>
+        Some of Van Gogh's most popular paintings:
+      </h2>
+
+      <img
+        class="mySlides w3-animate"
+        src="slides/Irises.jpg"
+        style="width: 100%;"
+      />
+      <img
+        class="mySlides w3-animate"
+        src="slides/field.jpg"
+        style="width: 100%;"
+      />
+      <img
+        class="mySlides w3-animate"
+        src="slides/starryNight.jpg"
+        style="width: 100%;"
+      />
+      <img
+        class="mySlides w3-animate"
+        src="slides/sunflowers.jpg"
+        style="width: 100%;"
+      />
+    </div>
+    <div class="footer">
+      <hr />
+      <h3>Learn more!</h3>
+      <p id="footer-p">
+        Click
+        <a target = "_blank" href="https://www.britannica.com/biography/Vincent-van-Gogh">Here</a>
+        for more info. Please note that this link will open in another window.</p>
+      <p id="contactinfo">
+        Contact the author of this page
+        <a href="mailto:zab.wiggins@mscoding.org">here</a>.</p>
+      </p>
+      <a href="#top" id="totop">Back to Top</a>
+    </div>
+
+    <!--end slideshow-->
+    <!--javaScript to automate slideshow-->
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 3000);
+      }
+    </script>
+    <!--end javascript-->
+  </body>
+</html>
